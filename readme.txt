@@ -3,7 +3,7 @@ Contributors: hitrusha.com
 Tags: horoscope, horoscopes, zodiac, zodiacs, love, health, contacts, job, work, lucky, relationship, widget, widgets, plugin, plugins, sidebar, forecast, daily, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, Pisces, Ram, Bull, Twins, Crab, Lion, Maiden, Scales, Scorpion, Centaur, Archer, Goat-horned, The Sea-Goat, Water-Bearer, Fish, horoskop, horoskope
 Requires at least: 2.5
 Tested up to: 2.8.4
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
