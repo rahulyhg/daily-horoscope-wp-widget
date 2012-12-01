@@ -7,11 +7,11 @@ Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This is a daily horoscope. The widget show 5 star forecast for every zodiac sign and deep daily horoscope. The content will be pulled from Hitrusha.com
+This is a daily horoscope. The widget show 5 stars forecast for every zodiac sign and deep daily horoscope. The content will be pulled from Hitrusha.com
 
 == Description ==
 
-This is a daily horoscope. The widget show 5 star forecast for every zodiac sign and deep daily horoscope. The content will be pulled from Hitrusha.com
+This is a daily horoscope. The widget show 5 stars forecast for every zodiac sign and deep daily horoscope. The content will be pulled from Hitrusha.com
 
 == Installation ==
 
