@@ -1,4 +1,4 @@
-=== Horoscope ===
+=== Horoscope widget ===
 Contributors: Horoscopes by Hitrusha.com
 Tags: horoscope, horoscopes, zodiac, zodiacs, love, health, contacts, job, work, lucky, relationship, widget, widgets, plugin, plugins, sidebar, forecast, daily, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, Pisces, Ram, Bull, Twins, Crab, Lion, Maiden, Scales, Scorpion, Centaur, Archer, Goat-horned, The Sea-Goat, Water-Bearer, Fish, horoskop, horoskope
 Requires at least: 2.5
