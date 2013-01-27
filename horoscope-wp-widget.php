@@ -420,7 +420,7 @@ class wp_horoscope {
 
 			else {
 
-				setZodiac(1);
+				//setZodiac(1);
 
 				}
 
