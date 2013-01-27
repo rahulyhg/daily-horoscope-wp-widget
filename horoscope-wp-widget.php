@@ -138,7 +138,7 @@ class wp_horoscope {
 
 				$starsCase .= 'stars['.$zodiac->id.'][4]=""; ';
 			
-				$starsCase .= 'sign['.$zodiac->id.']="Plugin is not activated. Check the settings."; ';
+				$starsCase .= 'sign['.$zodiac->id.']="Link is not activated. Check the settings."; ';
 				
 				$starsCase .= 'url['.$zodiac->id.']=""; ';
 				
