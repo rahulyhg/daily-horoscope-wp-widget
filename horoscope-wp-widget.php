@@ -96,7 +96,7 @@ class wp_horoscope {
 
 			$credit = $options['credit'];
 
-			if ($credit == 1) $displayCase = '<li class="zodiacHead"><a id="zodiacUrl">&nbsp;</a></li>';
+			if ($credit == 1) $displayCase = '<li class="zodiacHead"><a id="zodiacUrl" href="http://hitrusha.com" title="wordpress horoscope widget" >Wordpress horoscope widget</a></li>';
 			else $displayCase = '<li id="zodiacUrl" style="font-weight:bold; text-align:center;">Link to horoscope is stopped, please check settings.</li>';
 
 			$output[] = $before_widget . $before_title . $title . $after_title;
