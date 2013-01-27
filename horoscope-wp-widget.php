@@ -105,7 +105,7 @@ class wp_horoscope {
 
 
 
-		$zodiacXml = simplexml_load_file("http://hitrusha.com/get_daily_zodiac.xml", 'SimpleXMLElement',LIBXML_NOCDATA);
+		$zodiacXml = simplexml_load_file("http://hitrusha.com/get_daily_zodiac.php?date=".date("Ymd"), 'SimpleXMLElement',LIBXML_NOCDATA);
 
 		foreach ($zodiacXml->zodiac as $index => $zodiac) {
 
