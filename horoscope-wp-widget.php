@@ -109,20 +109,40 @@ class wp_horoscope {
 
 		foreach ($zodiacXml->zodiac as $index => $zodiac) {
 
-			$starsCase .= 'stars['.$zodiac->id.'][0]="'. $zodiac->health .'"; ';
-
-			$starsCase .= 'stars['.$zodiac->id.'][1]="'. $zodiac->love .'"; ';
-
-			$starsCase .= 'stars['.$zodiac->id.'][2]="'. $zodiac->job .'"; ';
-
-			$starsCase .= 'stars['.$zodiac->id.'][3]="'. $zodiac->contacts .'"; ';
-
-			$starsCase .= 'stars['.$zodiac->id.'][4]="'. $zodiac->lucky .'"; ';
+			if ($credit == 1) {
 			
-			$starsCase .= 'sign['.$zodiac->id.']="'. $zodiac->name .'"; ';
+				$starsCase .= 'stars['.$zodiac->id.'][0]="'. $zodiac->health .'"; ';
+
+				$starsCase .= 'stars['.$zodiac->id.'][1]="'. $zodiac->love .'"; ';
+
+				$starsCase .= 'stars['.$zodiac->id.'][2]="'. $zodiac->job .'"; ';
+
+				$starsCase .= 'stars['.$zodiac->id.'][3]="'. $zodiac->contacts .'"; ';
+
+				$starsCase .= 'stars['.$zodiac->id.'][4]="'. $zodiac->lucky .'"; ';
 			
-			if ($credit == 1) $starsCase .= 'url['.$zodiac->id.']="'. $zodiac->url .'"; ';
-			else $starsCase .= 'url['.$zodiac->id.']=""; ';
+				$starsCase .= 'sign['.$zodiac->id.']="'. $zodiac->name .'"; ';
+			
+				$starsCase .= 'url['.$zodiac->id.']="'. $zodiac->url .'"; ';
+				
+				}
+			else {
+				
+				$starsCase .= 'stars['.$zodiac->id.'][0]=""; ';
+
+				$starsCase .= 'stars['.$zodiac->id.'][1]=""; ';
+
+				$starsCase .= 'stars['.$zodiac->id.'][2]=""; ';
+
+				$starsCase .= 'stars['.$zodiac->id.'][3]=""; ';
+
+				$starsCase .= 'stars['.$zodiac->id.'][4]=""; ';
+			
+				$starsCase .= 'sign['.$zodiac->id.']="Plugin is not activated. Check the settings."; ';
+				
+				$starsCase .= 'url['.$zodiac->id.']=""; ';
+				
+				}
 
 			}
 
