@@ -3,15 +3,20 @@ Contributors: Hitrusha.com
 Tags: horoscope, horoscopes, zodiac, zodiacs, love, health, contacts, job, work, lucky, relationship, widget, widgets, plugin, plugins, sidebar, forecast, daily, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, Pisces, Ram, Bull, Twins, Crab, Lion, Maiden, Scales, Scorpion, Centaur, Archer, Goat-horned, The Sea-Goat, Water-Bearer, Fish, horoskop, horoskope
 Requires at least: 2.5
 Tested up to: 2.8.4
-Stable tag: 1.1
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Donate link: http://hitrusha.com/
 
-This is a daily horoscope. The widget show 5 stars forecast for every zodiac sign and deep daily horoscope. The content will be pulled from Hitrusha.com
+This is a daily horoscope widget. 
+The widget show 5 stars forecast for every zodiac sign and deep daily horoscope. 
+The content will be pulled from Hitrusha.com
 
 == Description ==
 
-This is a daily horoscope. The widget show 5 stars forecast for every zodiac sign and deep daily horoscope. The content will be pulled from Hitrusha.com
+This is a daily horoscope widget. 
+The widget show 5 stars forecast for every zodiac sign and deep daily horoscope. 
+The content will be pulled from Hitrusha.com
 
 == Installation ==
 
@@ -24,7 +29,7 @@ This is a daily horoscope. The widget show 5 stars forecast for every zodiac sig
 
 = Add this horoscope to a post or a page =
 
-1. Place [horoscope_wp] in the content to insert into a post.
+1. Place [wp_horoscope] in the content to insert into a post.
 
 == Frequently Asked Questions ==
 
