@@ -382,9 +382,9 @@ class wp_horoscope {
 				
 				if (url[z] != "") {
 				
-					elm("zodiacUrl").innerHTML = "Read " + sign[z] + " daily horoscope forecast »";
+					elm("zodiacUrl").innerHTML = "" + sign[z] + " daily horoscope";
 				
-					elm("zodiacUrl").setAttribute("title",  "Read " + sign[z] + " daily horoscope forecast");
+					elm("zodiacUrl").setAttribute("title",  "" + sign[z] + " daily horoscope");
 				
 					elm("zodiacUrl").setAttribute("href", url[z]);
 					
