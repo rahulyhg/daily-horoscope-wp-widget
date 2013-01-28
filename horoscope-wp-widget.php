@@ -420,7 +420,7 @@ class wp_horoscope {
 
 			else {
 
-				setZodiac(Math.floor((Math.random()*12)+1); );
+				setZodiac(Math.floor((Math.random()*12)+1));
 
 				}
 
