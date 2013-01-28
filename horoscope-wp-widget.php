@@ -10,7 +10,7 @@ Description: This is a daily horoscope widget for wordpress. Place [wp_horoscope
 
 Author: hitrusha.com
 
-Version: 1.1
+Version: 1.1.2
 
 Author URI: http://www.hitrusha.com
 
