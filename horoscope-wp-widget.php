@@ -368,7 +368,7 @@ class wp_horoscope {
 			li {border-top:0px solid !important; border-bottom:0px solid !important;}
 			li.zodiacHead { margin-top:5px; margin-bottom:5px; }
 
-			.t1 { background-color:#fff; border-radius:3px; box-shadow:1px 1px 1px #ccc; width:100%;}
+			.t1 { background-color:#fff; border-radius:3px; box-shadow:1px 1px 1px #ccc; width:100%; opacity:0.85;}
 
 			
 
