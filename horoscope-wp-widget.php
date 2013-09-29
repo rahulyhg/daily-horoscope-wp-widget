@@ -56,8 +56,6 @@ class wp_horoscope {
 
     	$calc_title = 'Daily Horoscope';
 
-
-
 		$calc_credit = 0;
 
 
@@ -185,18 +183,25 @@ class wp_horoscope {
 			$options = get_option('wp_horoscope');
 
 
-
 			$title = $options['title'];
 
-
-
 			$credit = $options['credit'];
+			
+			$health = $options['health'];
+			
+			$love = $options['love'];
+			
+			$job = $options['job'];
+			
+			$contacts = $options['contacts'];
+			
+			$lucky = $options['lucky'];
 
 
 
-			if ($credit == 1) $displayCase = '<li class="zodiacHead"><a id="zodiacUrl" href="http://hitrusha.com" title="wordpress horoscope widget" >Wordpress horoscope widget</a></li>';
+			if ($credit == 1) $displayCase = '<li class="zodiacHead"><a id="zodiacUrl" style="color:#777; text-shadow:1px 1px 1px #fff; text-decoration:underline; padding:2px;" href="http://hitrusha.com" title="wordpress horoscope widget" >Wordpress horoscope widget</a></li>';
 
-			else $displayCase = '<li id="zodiacUrl" style="font-weight:bold; text-align:center;">Link to horoscope is stopped, please check settings.</li>';
+			else $displayCase = '<li id="zodiacUrl" style="font-weight:bold; text-align:center; color:#f00;">Link to horoscope is stopped, please check settings.</li>';
 
 
 
@@ -474,23 +479,23 @@ class wp_horoscope {
 
 	  
 
-        <li><label>Health</label><span><em id="e1" class="s0" title="health">&nbsp;</em></span></li>
+        <li><label>'.$health.'</label><span><em id="e1" class="s0" title="'.$health.'">&nbsp;</em></span></li>
 
 
 
-        <li><label>Love</label><span><em id="e2" class="s0" title="love">&nbsp;</em></span></li>
+        <li><label>'.$love.'</label><span><em id="e2" class="s0" title="'.$love.'">&nbsp;</em></span></li>
 
 
 
-        <li><label>Job</label><span><em id="e3" class="s0" title="job">&nbsp;</em></span></li>
+        <li><label>'.$job.'</label><span><em id="e3" class="s0" title="'.$job.'">&nbsp;</em></span></li>
 
 
 
-        <li><label>Contacts</label><span><em id="e4" class="s0" title="contacts">&nbsp;</em></span></li>
+        <li><label>'.$contacts.'</label><span><em id="e4" class="s0" title="'.$contacts.'">&nbsp;</em></span></li>
 
 
 
-        <li><label>Lucky</label><span><em id="e5" class="s0" title="lucky">&nbsp;</em></span></li>
+        <li><label>'.$lucky.'</label><span><em id="e5" class="s0" title="'.$lucky.'">&nbsp;</em></span></li>
 
 
 
@@ -905,46 +910,45 @@ class wp_horoscope {
 		$class_name = 'wp_horoscope';
 
 
-
 		$calc_title = 'Daily Horoscope';
-
-
-
 		$calc_credit = 0;
-
-
-
-
-
+		$calc_health = 'Health';
+		$calc_love = 'Love';
+		$calc_job = 'Job';
+		$calc_contacts = 'Contacts';
+		$calc_lucky = 'Lucky';
 
 
 	    $options = get_option($class_name);
 
 
-
-
-
-
-
-		if (!is_array($options)) $options = array('title'=>$calc_title,'credit'=>$calc_credit);
-
-
-
-
+		if (!is_array($options)) $options = array(
+			'title'=>$calc_title, 
+			'credit'=>$calc_credit, 
+			'health'=>$calc_health, 
+			'love'=>$calc_love, 
+			'job'=>$calc_job, 
+			'contacts'=>$calc_contacts, 
+			'lucky'=>$calc_lucky 
+			);
 
 
 
 		if ($_POST[$class_name.'_submit']) {
 
-
-
 			$options['title'] = strip_tags(stripslashes($_POST[$class_name.'_title']));
 
-
-
 			$options['credit'] = strip_tags(stripslashes($_POST[$class_name.'_credit']));
+			
+			$options['health'] = strip_tags(stripslashes($_POST[$class_name.'_health']));
+			
+			$options['love'] = strip_tags(stripslashes($_POST[$class_name.'_love']));
+			
+			$options['job'] = strip_tags(stripslashes($_POST[$class_name.'_job']));
 
-
+			$options['contacts'] = strip_tags(stripslashes($_POST[$class_name.'_contacts']));
+			
+			$options['lucky'] = strip_tags(stripslashes($_POST[$class_name.'_lucky']));
 
 			update_option($class_name, $options);
 
@@ -954,36 +958,40 @@ class wp_horoscope {
 
 
 
-
-
-
-
 		$title = htmlspecialchars($options['title'], ENT_QUOTES);
 
-
-
 		$credit = htmlspecialchars($options['credit'], ENT_QUOTES);
+		
+		$health = htmlspecialchars($options['health'], ENT_QUOTES);
 
-
+		$love = htmlspecialchars($options['love'], ENT_QUOTES);
+		
+		$job = htmlspecialchars($options['job'], ENT_QUOTES);
+		
+		$contacts = htmlspecialchars($options['contacts'], ENT_QUOTES);
+		
+		$lucky = htmlspecialchars($options['lucky'], ENT_QUOTES);
 
 		if ($credit == "1") $defaultChecked = "checked='checked'"; else $defaultChecked="";
 
 
 
 
-
-
-
-		echo '<p>Title: <input style="width: 180px;" name="'.$class_name.'_title" type="text" value="'.$title.'" /></p>';
-
-
-
 		echo '<p><input name="'.$class_name.'_credit" type="checkbox" '.$defaultChecked.' value="1" /> Display link to customer daily horoscope.</p>';
 
+		echo '<p>Daily horoscope: <input style="width: 180px;" name="'.$class_name.'_title" type="text" value="'.$title.'" /></p>';
 		
+		echo '<p>Health: <input style="width: 180px;" name="'.$class_name.'_health" type="text" value="'.$health.'" /></p>';
+		
+		echo '<p>Love: <input style="width: 180px;" name="'.$class_name.'_love" type="text" value="'.$love.'" /></p>';
+
+		echo '<p>Job: <input style="width: 180px;" name="'.$class_name.'_job" type="text" value="'.$job.'" /></p>';
+		
+		echo '<p>Contacts: <input style="width: 180px;" name="'.$class_name.'_contacts" type="text" value="'.$contacts.'" /></p>';
+		
+		echo '<p>Lucky: <input style="width: 180px;" name="'.$class_name.'_lucky" type="text" value="'.$lucky.'" /></p>';
 
 		if ($credit != "1") echo "<p style='color:#f00;'>Outside links need to be enabled for the plugin to work properly. If they're not, the customers can't read the forecast.</p>";
-
 
 
 		echo '<input type="hidden" name="'.$class_name.'_submit" value="1" />';
