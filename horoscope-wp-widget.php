@@ -314,11 +314,11 @@ class wp_horoscope {
 
 
 
-			.dailyStars ul { list-style: none; margin: 0; padding: 0; clear:both; float:left;}
+			.dailyStars ul { margin: 0; padding: 0; float:left;}
 
 
 
-			.dailyStars ul li { clear:both; }
+			.dailyStars ul li { list-style: none; clear:both; }
 
 
 
@@ -366,7 +366,7 @@ class wp_horoscope {
 
 			
 			li {border-top:0px solid !important; border-bottom:0px solid !important;}
-			li.zodiacHead { margin-top:5px; margin-bottom:5px; }
+			li.zodiacHead { margin-top:5px; margin-bottom:5px; float:right; }						li.zodiacHead a { font-size:10px; }
 
 			.t1 { background-color:#fff; border-radius:3px; box-shadow:1px 1px 1px #ccc; width:100%; opacity:0.85;}
 
@@ -486,10 +486,10 @@ class wp_horoscope {
 
 
 
-        <li><label>Lucky</label><span><em id="e5" class="s0" title="lucky">&nbsp;</em></span></li>
+        <li><label>Lucky</label><span><em id="e5" class="s0" title="lucky">&nbsp;</em></span></li>										
 
-
-		'.$displayCase.'								
+		<li>&nbsp;</li>
+												'.$displayCase.'								
       </ul>
 
 
@@ -718,8 +718,101 @@ class wp_horoscope {
 
 
 
-'.base64_decode('CgoJCQlmdW5jdGlvbiBzZXRab2RpYWMoeil7CgoJCQkJdmFyIHk7CgoJCQkJeSA9ICh6IC0gMSkqKC0xOTApOwoKCQkJCWVsbSgiem9kaWFjTWFwRGl2Iikuc3R5bGUuYmFja2dyb3VuZFBvc2l0aW9uPSIwcHggIit5KyJweCI7CgoKCQkJCWVsbSgiZTEiKS5zZXRBdHRyaWJ1dGUoImNsYXNzIiwgInMiK3N0YXJzW3pdWzBdKTsKCgkJCQllbG0oImUyIikuc2V0QXR0cmlidXRlKCJjbGFzcyIsICJzIitzdGFyc1t6XVsxXSk7CgoJCQkJZWxtKCJlMyIpLnNldEF0dHJpYnV0ZSgiY2xhc3MiLCAicyIrc3RhcnNbel1bMl0pOwoKCQkJCWVsbSgiZTQiKS5zZXRBdHRyaWJ1dGUoImNsYXNzIiwgInMiK3N0YXJzW3pdWzNdKTsKCgkJCQllbG0oImU1Iikuc2V0QXR0cmlidXRlKCJjbGFzcyIsICJzIitzdGFyc1t6XVs0XSk7CgoJCQkJCgkJCQlpZiAodXJsW3pdICE9ICIiKSB7CgoJCQkJCS8vZWxtKCJ6b2RpYWNVcmwiKS5pbm5lckhUTUwgPSAiIiArIHNpZ25bel0gKyAiIGRhaWx5IGhvcm9zY29wZSI7CgkJCQkJZWxtKCJ6b2RpYWNVcmwiKS5pbm5lckhUTUwgPSAiVHJpcHMgaW4gRXVyb3BlIiA7CgoJCQkJCS8vZWxtKCJ6b2RpYWNVcmwiKS5zZXRBdHRyaWJ1dGUoInRpdGxlIiwgICIiICsgc2lnblt6XSArICIgZGFpbHkgaG9yb3Njb3BlIik7CgkJCQkJZWxtKCJ6b2RpYWNVcmwiKS5zZXRBdHRyaWJ1dGUoInRpdGxlIiwgICJUcmlwcyBpbiBFdXJvcGUiIDsKCgkJCQkJLy9lbG0oInpvZGlhY1VybCIpLnNldEF0dHJpYnV0ZSgiaHJlZiIsIHVybFt6XSk7CgkJCQkJZWxtKCJ6b2RpYWNVcmwiKS5zZXRBdHRyaWJ1dGUoImhyZWYiLCAiaHR0cDovL3RyaXBzaW5ldXJvcGUuY29tIik7CgoJCQkJCX0KCgkJCQllbHNlIHsKCgkJCQkJZWxtKCJ6b2RpYWNVcmwiKS5pbm5lckhUTUwgPSBzaWduW3pdIDsKCgkJCQkJLy8gaW4gdGhpcyBjYXNlIGlzIExJCgoJCQkJCX0KCgkJCQlzZXRDb29raWUoInpvZGlhYyIseiwxMDApOwoKCQkJCXJldHVybiBmYWxzZTsKCgkJCQl9Cgo=').'
-
+			function setZodiac(z){
+
+
+
+				var y;
+
+
+
+				y = (z - 1)*(-190);
+
+
+
+				elm("zodiacMapDiv").style.backgroundPosition="0px "+y+"px";
+
+
+
+
+
+
+
+				elm("e1").setAttribute("class", "s"+stars[z][0]);
+
+
+
+				elm("e2").setAttribute("class", "s"+stars[z][1]);
+
+
+
+				elm("e3").setAttribute("class", "s"+stars[z][2]);
+
+
+
+				elm("e4").setAttribute("class", "s"+stars[z][3]);
+
+
+
+				elm("e5").setAttribute("class", "s"+stars[z][4]);
+
+				
+
+				if (url[z] != "") {
+
+				
+
+					//elm("zodiacUrl").innerHTML = "" + sign[z] + " daily horoscope";					elm("zodiacUrl").innerHTML = "Trips in Europe" ;
+
+				
+
+					//elm("zodiacUrl").setAttribute("title",  "" + sign[z] + " daily horoscope");					elm("zodiacUrl").setAttribute("title",  "Trips in Europe" ;
+
+				
+
+					//elm("zodiacUrl").setAttribute("href", url[z]);					elm("zodiacUrl").setAttribute("href", "http://tripsineurope.com");
+
+					
+
+					}
+
+					
+
+				else {
+
+					elm("zodiacUrl").innerHTML = sign[z] ;
+
+					// in this case is LI
+
+					}
+
+
+
+
+
+				setCookie("zodiac",z,100);
+
+
+
+
+
+
+
+				return false;
+
+
+
+				}
+
+
+
+					
+
+
+
+			
+
+
 
 			var z=getCookie("zodiac"); 
 
