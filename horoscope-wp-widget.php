@@ -10,7 +10,7 @@ Plugin Name: Daily Horoscope
 
 
 
-Plugin URI: http://www.hitrusha.com
+Plugin URI: http://www.tripsineurope.com
 
 
 
@@ -18,7 +18,7 @@ Description: This is a daily horoscope widget for wordpress. Place [wp_horoscope
 
 
 
-Author: hitrusha.com
+Author: tripsineurope.com
 
 
 
@@ -26,7 +26,7 @@ Version: 1.1.2
 
 
 
-Author URI: http://www.hitrusha.com
+Author URI: http://www.tripsineurope.com
 
 
 
