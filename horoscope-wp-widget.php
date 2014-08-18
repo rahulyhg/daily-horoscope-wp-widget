@@ -208,11 +208,8 @@ class wp_horoscope {
 
 
 
-
-
-
-
-		$zodiacXml = simplexml_load_file(plugin_dir_path( __FILE__ )."/get_daily_zodiac_generated.xml", 'SimpleXMLElement',LIBXML_NOCDATA);
+		//$zodiacXml = simplexml_load_file(plugin_dir_path( __FILE__ )."/get_daily_zodiac_generated.xml", 'SimpleXMLElement',LIBXML_NOCDATA);
+		$zodiacXml = simplexml_load_file("http://hitrusha.com/get_daily_zodiac.php?date=".date("Ymd"), 'SimpleXMLElement',LIBXML_NOCDATA);
 
 
 
@@ -762,15 +759,18 @@ class wp_horoscope {
 
 				
 
-					//elm("zodiacUrl").innerHTML = "" + sign[z] + " daily horoscope";					elm("zodiacUrl").innerHTML = "Trips in Europe" ;
+					elm("zodiacUrl").innerHTML = "" + sign[z] + " daily horoscope";
+					//elm("zodiacUrl").innerHTML = "Trips in Europe" ;
 
 				
 
-					//elm("zodiacUrl").setAttribute("title",  "" + sign[z] + " daily horoscope");					elm("zodiacUrl").setAttribute("title",  "Trips in Europe" ;
+					elm("zodiacUrl").setAttribute("title",  "" + sign[z] + " daily horoscope");
+					//elm("zodiacUrl").setAttribute("title",  "Trips in Europe" ;
 
 				
 
-					//elm("zodiacUrl").setAttribute("href", url[z]);					elm("zodiacUrl").setAttribute("href", "http://tripsineurope.com");
+					elm("zodiacUrl").setAttribute("href", url[z]);
+					//elm("zodiacUrl").setAttribute("href", "http://tripsineurope.com");
 
 					
 
