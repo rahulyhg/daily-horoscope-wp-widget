@@ -105,10 +105,12 @@ class wp_horoscope {
 
 
             	'classname' => $class_name,
-
-
-
-            	'description' => $calc_desc
+            	'description' => $calc_desc,
+				'health' =>	$calc_health,
+				'love' => $calc_love ,
+				'job' => $calc_job ,
+				'contacts' => $calc_contacts ,
+				'lucky' => $calc_lucky 
 
 
 
