@@ -937,9 +937,13 @@ class wp_horoscope {
 			$options['title'] = strip_tags(stripslashes($_POST[$class_name.'_title']));
 
 
-
 			$options['credit'] = strip_tags(stripslashes($_POST[$class_name.'_credit']));
-
+			
+			$options['health'] = strip_tags(stripslashes($_POST[$class_name.'_health']));
+			$options['love'] = strip_tags(stripslashes($_POST[$class_name.'_love']));
+			$options['job'] = strip_tags(stripslashes($_POST[$class_name.'_job']));
+			$options['contacts'] = strip_tags(stripslashes($_POST[$class_name.'_contacts']));
+			$options['lucky'] = strip_tags(stripslashes($_POST[$class_name.'_lucky']));
 
 
 			update_option($class_name, $options);
@@ -960,7 +964,11 @@ class wp_horoscope {
 
 		$credit = htmlspecialchars($options['credit'], ENT_QUOTES);
 
-
+		$credit = htmlspecialchars($options['health'], ENT_QUOTES);
+		$credit = htmlspecialchars($options['love'], ENT_QUOTES);
+		$credit = htmlspecialchars($options['job'], ENT_QUOTES);
+		$credit = htmlspecialchars($options['contacts'], ENT_QUOTES);
+		$credit = htmlspecialchars($options['lucky'], ENT_QUOTES);
 
 		if ($credit == "1") $defaultChecked = "checked='checked'"; else $defaultChecked="";
 
@@ -972,6 +980,11 @@ class wp_horoscope {
 
 		echo '<p>Title: <input style="width: 180px;" name="'.$class_name.'_title" type="text" value="'.$title.'" /></p>';
 
+		echo '<p>Health: <input style="width: 180px;" name="'.$class_name.'_health" type="text" value="'.$health.'" /></p>';
+		echo '<p>Love: <input style="width: 180px;" name="'.$class_name.'_love" type="text" value="'.$love.'" /></p>';
+		echo '<p>Job: <input style="width: 180px;" name="'.$class_name.'_job" type="text" value="'.$job.'" /></p>';
+		echo '<p>Contacts: <input style="width: 180px;" name="'.$class_name.'_contacts" type="text" value="'.$contacts.'" /></p>';
+		echo '<p>Lucky: <input style="width: 180px;" name="'.$class_name.'_lucky" type="text" value="'.$lucky.'" /></p>';
 
 
 		echo '<p><input name="'.$class_name.'_credit" type="checkbox" '.$defaultChecked.' value="1" /> Display link to customer daily horoscope.</p>';
