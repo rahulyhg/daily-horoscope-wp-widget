@@ -921,7 +921,11 @@ class wp_horoscope {
 
 
 		$calc_title = 'Daily Horoscope';
-
+		$calc_health = 'Health';
+		$calc_love = 'Love';
+		$calc_job = 'Job';
+		$calc_contacts = 'Contacts';
+		$calc_lucky = 'Lucky';
 
 
 		$calc_credit = 0;
