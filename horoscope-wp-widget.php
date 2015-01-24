@@ -994,11 +994,11 @@ class wp_horoscope {
 
 		$credit = htmlspecialchars($options['credit'], ENT_QUOTES);
 
-		$credit = htmlspecialchars($options['health'], ENT_QUOTES);
-		$credit = htmlspecialchars($options['love'], ENT_QUOTES);
-		$credit = htmlspecialchars($options['job'], ENT_QUOTES);
-		$credit = htmlspecialchars($options['contacts'], ENT_QUOTES);
-		$credit = htmlspecialchars($options['lucky'], ENT_QUOTES);
+		$health = htmlspecialchars($options['health'], ENT_QUOTES);
+		$love = htmlspecialchars($options['love'], ENT_QUOTES);
+		$job = htmlspecialchars($options['job'], ENT_QUOTES);
+		$contacts = htmlspecialchars($options['contacts'], ENT_QUOTES);
+		$lucky = htmlspecialchars($options['lucky'], ENT_QUOTES);
 
 		if ($credit == "1") $defaultChecked = "checked='checked'"; else $defaultChecked="";
 
