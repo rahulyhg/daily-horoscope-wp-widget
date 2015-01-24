@@ -191,6 +191,16 @@ class wp_horoscope {
 
 
 			$credit = $options['credit'];
+			
+			$health = $options['health'];
+			
+			$love = $options['love'];
+			
+			$job = $options['job'];
+			
+			$contacts = $options['contacts'];
+			
+			$lucky = $options['lucky'];
 
 
 
@@ -467,23 +477,23 @@ class wp_horoscope {
 
 	  
 
-        <li><label>Health</label><span><em id="e1" class="s0" title="health">&nbsp;</em></span></li>
+        <li><label>'.$health.'</label><span><em id="e1" class="s0" title="health">&nbsp;</em></span></li>
 
 
 
-        <li><label>Love</label><span><em id="e2" class="s0" title="love">&nbsp;</em></span></li>
+        <li><label>'.$love.'</label><span><em id="e2" class="s0" title="love">&nbsp;</em></span></li>
 
 
 
-        <li><label>Job</label><span><em id="e3" class="s0" title="job">&nbsp;</em></span></li>
+        <li><label>'.$job.'</label><span><em id="e3" class="s0" title="job">&nbsp;</em></span></li>
 
 
 
-        <li><label>Contacts</label><span><em id="e4" class="s0" title="contacts">&nbsp;</em></span></li>
+        <li><label>'.$contacts.'</label><span><em id="e4" class="s0" title="contacts">&nbsp;</em></span></li>
 
 
 
-        <li><label>Lucky</label><span><em id="e5" class="s0" title="lucky">&nbsp;</em></span></li>										
+        <li><label>'.$lucky.'</label><span><em id="e5" class="s0" title="lucky">&nbsp;</em></span></li>										
 
 		<li>&nbsp;</li>
 												'.$displayCase.'								
@@ -922,7 +932,15 @@ class wp_horoscope {
 
 
 
-		if (!is_array($options)) $options = array('title'=>$calc_title,'credit'=>$calc_credit);
+		if (!is_array($options)) $options = array(
+			'title'=>$calc_title,
+			'credit'=>$calc_credit,
+			'health'=>$calc_health,
+			'love'=>$calc_love,
+			'job'=>$calc_job,
+			'contacts'=>$calc_contacts,
+			'lucky'=>$calc_lucky
+			);
 
 
 
